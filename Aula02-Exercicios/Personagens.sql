@@ -37,4 +37,15 @@ insert into tb_personagem (nome, poder_defesa, poder_ataque, categoria_id) value
 insert into tb_personagem (nome, poder_defesa, poder_ataque, categoria_id) values ( "Jamal" , 2500, 300, 1);
 select * from tb_personagem;
 
-select * from tb_personagens where poder_ataque between 2000 and 7000 order by poder_ataque desc;
+select * from tb_personagem where poder_ataque > 2000;
+
+select * from tb_personagem where poder_defesa between 1000 and 2000;
+
+select * from tb_personagem where nome like "C%";
+
+select tb_personagem.nome,tb_personagem.categoria_id 
+from tb_personagem inner join tb_categoria on tb_classe.id = tb_personagem.categoria_id;
+
+select tb_personagem.nome, tb_classe.descricao 
+
+from tb_personagem inner join tb_classe on tb_classe.id = tb_personagem.classe_id and tb_classe.descricao = "Arqueiro";
